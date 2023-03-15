@@ -1,1 +1,26 @@
 GET http://localhost:2000/products
+
+### 
+POST  http://localhost:2000/products http/1.1
+Content-Type: application/json
+
+{
+    "name": "test12",
+    "price": 122,
+    "stock": 199,
+    "sale": 10,
+    "category": "computers & tablets",
+    "spec" : [{"display" : "15inch"},{"display" : "a"}],
+    "description": "Best of the year"
+}
+
+###
+DELETE  http://localhost:2000/product/delete?name=test12  HTTP/1.1
+
+###
+PUT http://localhost:2000/product/update?name=test12 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name" : "test1"
+}
