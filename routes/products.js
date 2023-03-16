@@ -24,7 +24,6 @@ products_router.post("/products", async (req, res) => {
 products_router.delete("/product/delete", async (req, res) => {
   const deleteProName = req.query.name;
   const result = await deleteProduct(deleteProName);
-  console.log(result);
 });
 
 //put product
@@ -32,6 +31,6 @@ products_router.put("/product/update", async (req, res) => {
   const oldProName = req.query.name;
   const newProName = req.body.name;
   const result = await putProduct(oldProName, newProName);
-  console.log(result);
 });
+
 export default products_router;

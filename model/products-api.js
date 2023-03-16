@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
-const productsSchema = new Schema(
+const productSchema = new Schema(
   {
     name: { type: String, required: true },
     price: {
@@ -12,16 +12,13 @@ const productsSchema = new Schema(
     category: { type: String, required: true },
     spec: { type: [], required: false },
     description: String,
+    created_date: { type: String, required: true },
   },
   {
     collection: "products",
   }
 );
 
-// const productsSchema = new Schema({
-//     collactions : ""
-// })
-
-const Products = mongoose.model("Products", productsSchema, "products");
+const Products = mongoose.model("Products", productSchema, "products");
 
 export default Products;
